@@ -11,3 +11,15 @@ def mode(nums):
         >>> mode([2, 2, 3, 3, 2])
         2
     """
+    freq = {}
+    for num in nums:
+        freq[num] = freq.get(num, 0) +1
+    
+    highest = -1
+    mode = None
+    for (key, value) in freq.items():
+        if value > highest:
+            highest = value 
+            mode = key
+
+    return mode
