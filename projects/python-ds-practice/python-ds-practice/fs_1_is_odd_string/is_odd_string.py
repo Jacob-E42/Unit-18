@@ -1,3 +1,7 @@
+def get_numeric_value(char):
+
+    return ord(char.lower()) - 96
+
 def is_odd_string(word):
     """Is the sum of the character-positions odd?
 
@@ -29,3 +33,8 @@ def is_odd_string(word):
     """
 
     # Hint: you may find the ord() function useful here
+    summed = sum([get_numeric_value(char) for char in word])  
+   
+    return summed % 2 != 0
+    
+
